@@ -72,4 +72,4 @@ class Student extends Persons {
 const s1 = new Student("Rahul", 26);
 
 // console.log(s1);
-s1.getInfo();
+// s1.getInfo();
