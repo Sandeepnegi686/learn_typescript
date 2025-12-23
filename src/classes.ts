@@ -45,7 +45,12 @@ class Dog extends Animal {
 // a2.feed = "biscuits";
 // a2.getProtectedData();
 
-abstract class Persons {
+interface PersonType {
+  name: string;
+  age: number;
+}
+
+abstract class Persons implements PersonType {
   name: string;
   age: number;
   constructor(name: string, age: number) {
@@ -56,7 +61,7 @@ abstract class Persons {
 }
 
 class Student extends Persons {
-  constructor(name: string, age: number) {
+  constructor(public name: string, public age: number) {
     super(name, age);
   }
   getInfo(): void {
